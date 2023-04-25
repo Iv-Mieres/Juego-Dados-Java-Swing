@@ -1,12 +1,5 @@
 package model;
 
-import vista.Tablero;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import javax.swing.JRootPane;
-import javax.swing.JTextField;
-
 public class Dado{
 
     private int[] dados;
