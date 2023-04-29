@@ -19,7 +19,6 @@ public class DavyJonesAccion extends AccionJugador {
 
     @Override
     public String desconfiar(Dado dadosPlayer, Dado dadosDavyJones, Tablero tablero) {
-	super.desconfiar(dadosPlayer, dadosDavyJones, tablero);
 	this.apuestaCantDadosPlayer = Integer.parseInt(dadosPlayer.getApuestaCantDados());
 	this.apuestaNumDadosPlayer = Integer.parseInt(dadosPlayer.getApuestaNumDados());
 	int conteoFinal = super.conteoFinal(dadosPlayer, dadosDavyJones, apuestaNumDadosPlayer);
@@ -51,7 +50,6 @@ public class DavyJonesAccion extends AccionJugador {
 
     @Override
     public String primerApuesta(Dado dadosPlayer, Dado dadosDavyJones, Tablero tablero) {
-	super.primerApuesta(dadosPlayer, dadosDavyJones, tablero);
 	var dados = new ArrayList<Integer>();
 	int[] cantidad = new int[6];
 	this.setApuestaCant(Integer.parseInt(dadosPlayer.getApuestaCantDados()));
@@ -120,7 +118,6 @@ public class DavyJonesAccion extends AccionJugador {
 
     @Override
     public String segundaApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero) {
-	super.segundaApuesta(dadosPlayer, dadosDavyJones, recuento, tablero);
 	this.setApuestaCant(Integer.parseInt(dadosPlayer.getApuestaCantDados()));
 	this.setApuestaNum(Integer.parseInt(dadosPlayer.getApuestaNumDados()));
 	int cantidad = 0;
@@ -139,7 +136,6 @@ public class DavyJonesAccion extends AccionJugador {
 
     @Override
     public String tercerApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero) {
-	super.tercerApuesta(dadosPlayer, dadosDavyJones, recuento, tablero);
 	this.setApuestaCant(Integer.parseInt(dadosPlayer.getApuestaCantDados()));
 	int cont = recuento + this.getApuestaCant();
 	
@@ -190,5 +186,9 @@ public class DavyJonesAccion extends AccionJugador {
 	    this.setRespuesta(desconfiar(dadosPlayer, dadosDavyJones, tablero));
 	}
 	return this.getRespuesta();
+    }
+
+    @Override
+    public void apostar(Dado dadosJugador, Dado dadosDavyJones, int conteoFinal, Tablero tablero) {
     };
 }

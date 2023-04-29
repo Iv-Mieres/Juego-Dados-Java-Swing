@@ -23,7 +23,6 @@ public class PlayerAccion extends AccionJugador {
 
     @Override
     public void apostar(Dado dadosPlayer, Dado dadosDavyJones, int conteoFinal, Tablero tablero) {
-	super.apostar(dadosPlayer, dadosDavyJones, conteoFinal, tablero);
 	String apuestaCantDavyJones = dadosDavyJones.getApuestaCantDados();
 	String apuestaNumDavyJones = dadosDavyJones.getApuestaNumDados();
 	// Realizar primer apuesta
@@ -58,7 +57,6 @@ public class PlayerAccion extends AccionJugador {
 
     @Override
     public String desconfiar(Dado dadosPlayer, Dado dadosDavyJones, Tablero tablero) {
-	super.desconfiar(dadosPlayer, dadosDavyJones, tablero);
 	this.setApuestaCant(Integer.parseInt(dadosDavyJones.getApuestaCantDados()));
 	this.setApuestaNum(Integer.parseInt(dadosDavyJones.getApuestaNumDados()));
 	int conteoFinal = super.conteoFinal(dadosPlayer, dadosDavyJones, this.getApuestaNum());
@@ -80,7 +78,6 @@ public class PlayerAccion extends AccionJugador {
 
     @Override
     public String primerApuesta(Dado dadosPlayer, Dado dadosDavyJones, Tablero tablero) {
-	super.primerApuesta(dadosPlayer, dadosDavyJones, tablero);
 	dadosPlayer.setApuestaCantDados("");
 	dadosPlayer.setApuestaNumDados("");
 	this.elegirCantDados(dadosPlayer);
@@ -90,7 +87,6 @@ public class PlayerAccion extends AccionJugador {
 
     @Override
     public String segundaApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero) {
-	super.segundaApuesta(dadosPlayer, dadosDavyJones, recuento, tablero);
 	dadosPlayer.setApuestaCantDados("0");
 	this.setApuestaCant(Integer.parseInt(dadosDavyJones.getApuestaCantDados()));
 	this.setApuestaNum(Integer.parseInt(dadosDavyJones.getApuestaNumDados()));
@@ -112,7 +108,6 @@ public class PlayerAccion extends AccionJugador {
 
     @Override
     public String tercerApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero) {
-	super.tercerApuesta(dadosPlayer, dadosDavyJones, recuento, tablero);
 	dadosPlayer.setApuestaCantDados("0");
 	this.setApuestaCant(Integer.parseInt(dadosDavyJones.getApuestaCantDados()));
 	this.elegirCantDados(dadosPlayer);

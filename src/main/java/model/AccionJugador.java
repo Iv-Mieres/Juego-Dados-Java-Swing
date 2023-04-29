@@ -72,24 +72,15 @@ public abstract class AccionJugador {
         this.apuestaCant = apuestaCant;
     }
 
-    public void apostar(Dado dadosJugador, Dado dadosDavyJones, int conteoFinal, Tablero tablero) {
-    };
+    public abstract void apostar(Dado dadosJugador, Dado dadosDavyJones, int conteoFinal, Tablero tablero);
 
-    public String primerApuesta(Dado dadosPlayer, Dado davyJones, Tablero tablero) {
-	return "";
-    };
+    public abstract String primerApuesta(Dado dadosPlayer, Dado davyJones, Tablero tablero);
 
-    public String segundaApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero) {
-	return "";
-    };
+    public abstract String segundaApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero);
 
-    public String tercerApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero) {
-	return "";
-    };
+    public abstract String tercerApuesta(Dado dadosPlayer, Dado dadosDavyJones, int recuento, Tablero tablero);
 
-    public String desconfiar(Dado dadosPlayer, Dado dadosDavyJones, Tablero tablero) {
-	return "";
-    };
+    public abstract String desconfiar(Dado dadosPlayer, Dado dadosDavyJones, Tablero tablero);
 
     public int conteoFinal(Dado dadosPlayer, Dado dadosDavyJones, int ultimoNumApostado) {
 	this.cantRojos = 0;
